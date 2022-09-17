@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+      - name: Install libfuse2 # needed for AppImage
+        run: |
+          sudo add-apt-repository universe
+          sudo apt install libfuse2
       - name: Checkout
         uses: actions/checkout@v2
       - uses: actions/cache@v2
