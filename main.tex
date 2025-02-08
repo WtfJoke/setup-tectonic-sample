@@ -1,73 +1,20 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}
+\documentclass[tikz,border=2mm]{standalone}
 \usepackage{xcolor}
-\usepackage{tikz}
-\usepackage[paperwidth=70mm, paperheight=120mm, margin=2mm]{geometry}
-\pagestyle{empty}
-
 \begin{document}
-
-% --- Karte 1: Zauberer-Karte ---
-\begin{tikzpicture}[remember picture, overlay]
-    % Rahmen mit abgerundeten Ecken
-    \draw[rounded corners=5mm, line width=1.5pt, black] (0,0) rectangle (70mm,120mm);
-    
-    % Hintergrund mit Farbverlauf (magischer Effekt)
-    \shade[rounded corners=5mm, bottom color=blue!20, top color=purple!50] (0,0) rectangle (70mm,120mm);
-    
-    % Titel der Karte
-    \node at (35mm,110mm) {\fontsize{16}{18}\selectfont\textbf{Zauberer-Karte}};
-    
-    % Zentrales Designelement (großer Stern)
-    \node at (35mm,70mm) {\fontsize{40}{42}\selectfont$\bigstar$};
-    
-    % Verstecktes Easter Egg (fadet fast in den Hintergrund)
-    \node[rotate=45, opacity=0.1, scale=0.5] at (60mm,20mm) {Mario};
+\begin{tikzpicture}[x=1mm,y=1mm]
+  % Rahmen mit abgerundeten Ecken
+  \draw[rounded corners=5mm, line width=1.5pt, black] (0,0) rectangle (70,120);
+  
+  % Hintergrund mit Farbverlauf (magischer Effekt)
+  \shade[rounded corners=5mm, bottom color=blue!20, top color=purple!50] (0,0) rectangle (70,120);
+  
+  % Titel der Karte
+  \node at (35,110) {\fontsize{16}{18}\selectfont\textbf{Zauberer-Karte}};
+  
+  % Zentrales Designelement (großer Stern)
+  \node at (35,70) {\fontsize{40}{42}\selectfont$\bigstar$};
+  
+  % Verstecktes Easter Egg (leicht transparent)
+  \node[rotate=45, opacity=0.1, scale=0.5] at (60,20) {Mario};
 \end{tikzpicture}
-
-\newpage
-
-% --- Karte 2: Narr-Karte ---
-\begin{tikzpicture}[remember picture, overlay]
-    % Rahmen
-    \draw[rounded corners=5mm, line width=1.5pt, black] (0,0) rectangle (70mm,120mm);
-    
-    % Verspielter Farbverlauf
-    \shade[rounded corners=5mm, bottom color=red!20, top color=yellow!50] (0,0) rectangle (70mm,120mm);
-    
-    % Titel der Karte
-    \node at (35mm,110mm) {\fontsize{16}{18}\selectfont\textbf{Narr-Karte}};
-    
-    % Dekoratives Element: Verspielter, geschwungener Strich
-    \draw[line width=1pt, black] (10mm,70mm) .. controls (35mm,90mm) and (35mm,50mm) .. (60mm,70mm);
-    
-    % Verstecktes Easter Egg
-    \node[rotate=-30, opacity=0.1, scale=0.5] at (10mm,30mm) {Julia};
-\end{tikzpicture}
-
-\newpage
-
-% --- Karte 3: Farben-Karte ---
-\begin{tikzpicture}[remember picture, overlay]
-    % Rahmen
-    \draw[rounded corners=5mm, line width=1.5pt, black] (0,0) rectangle (70mm,120mm);
-    
-    % Hintergrund in drei farbigen Bändern
-    \fill[red!30] (0,0) rectangle (70mm,40mm);
-    \fill[green!30] (0,40mm) rectangle (70mm,80mm);
-    \fill[blue!30] (0,80mm) rectangle (70mm,120mm);
-    
-    % Titel der Karte
-    \node at (35mm,110mm) {\fontsize{16}{18}\selectfont\textbf{Farben-Karte}};
-    
-    % Dekorative Kreise als zusätzliche grafische Elemente
-    \draw[fill=white, opacity=0.7] (20mm,60mm) circle (5mm);
-    \draw[fill=white, opacity=0.7] (50mm,60mm) circle (5mm);
-    
-    % Verstecktes Easter Egg
-    \node[rotate=15, opacity=0.1, scale=0.5] at (50mm,10mm) {Alex};
-\end{tikzpicture}
-
 \end{document}
