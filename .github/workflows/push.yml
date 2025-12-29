@@ -24,7 +24,7 @@ jobs:
         run: |
           tectonic main.tex
       - name: Upload pdf
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: main
           path: main.pdf
